@@ -1,0 +1,18 @@
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Bruno Oliveira', 59926683495, 90000.0, TIMESTAMP WITH TIME ZONE '1995-06-13T15:57:38.387Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Anakin Skywalker', 83841874282, 3200.0, TIMESTAMP WITH TIME ZONE '1984-11-23T18:01:16.019Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Padmé Amidala', 23021002200, 3300.0, TIMESTAMP WITH TIME ZONE '1984-03-22T17:50:55.905Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Luke Skywalker', 89381192200, 9900.0, TIMESTAMP WITH TIME ZONE '1989-01-12T22:44:40.954Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Leia Organa Solo', 58742711550, 5500.0, TIMESTAMP WITH TIME ZONE '1991-10-24T10:21:31.944Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Han Solo', 81776462068, 7500.0, TIMESTAMP WITH TIME ZONE '1982-04-18T08:19:32.187Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Mestre Yoda', 73402891352, 4500.0, TIMESTAMP WITH TIME ZONE '2003-01-30T01:49:51.806Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Darth Vader', 42351482654, 9500.0, TIMESTAMP WITH TIME ZONE '1999-09-21T22:00:25.778Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Obi-Wan Kenobi', 79857336124, 2505.0, TIMESTAMP WITH TIME ZONE '1987-05-21T21:49:58.253Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('C-3PO', 34129456504, 500.0, TIMESTAMP WITH TIME ZONE '1997-11-27T20:49:53.279Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Chewbacca', 85831878783, 2500.0, TIMESTAMP WITH TIME ZONE '2001-03-04T18:39:05.408Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Jabba o Hut', 55411387280, 11100.0, TIMESTAMP WITH TIME ZONE '1998-08-29T08:28:10.252Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Naruto Uzumaki', 15768134107, 333500.0, TIMESTAMP WITH TIME ZONE '2002-02-03T08:00:30.251Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Sasuke Uchiha', 57421938150, 9500.0, TIMESTAMP WITH TIME ZONE '1983-07-25T01:52:03.639Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Kakashi Hatake', 77826934540, 55500.0, TIMESTAMP WITH TIME ZONE '2004-06-11T23:37:19.615Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Itachi Uchiha', 59487654313, 9220.0, TIMESTAMP WITH TIME ZONE '2004-06-11T23:37:19.615Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Jiraya', 36718228303, 7500.0, TIMESTAMP WITH TIME ZONE '2004-06-11T23:37:19.615Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Ichiraku Ramen', 18241887140, 9100.0, TIMESTAMP WITH TIME ZONE '2004-06-11T23:37:19.615Z', 1);
