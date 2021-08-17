@@ -6,10 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/clients")
@@ -32,5 +29,11 @@ public class ClientController {
         Page<ClientDto> clients = clientService.findAllPaged(pageRequest);
 
         return ResponseEntity.ok().body(clients);
+    }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<ClientDto> findById(@PathVariable Long id){
+        ClientDto client = clientService.findById(id);
+        return ResponseEntity.ok().body(client);
     }
 }

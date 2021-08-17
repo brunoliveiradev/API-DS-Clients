@@ -3,10 +3,13 @@ package dev.brunoliveira.dsclients.service;
 import dev.brunoliveira.dsclients.dto.ClientDto;
 import dev.brunoliveira.dsclients.model.Client;
 import dev.brunoliveira.dsclients.repositories.ClientRepository;
+import dev.brunoliveira.dsclients.service.exceptions.ResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Optional;
 
 @Service
 public class ClientService {
@@ -21,5 +24,13 @@ public class ClientService {
     public Page<ClientDto> findAllPaged(PageRequest pageRequest) {
         Page<Client> clients = clientRepository.findAll(pageRequest);
         return clients.map(ClientDto::new);
+    }
+
+    @Transactional(readOnly = true)
+    public ClientDto findById(Long id) {
+        Optional<Client> clientOptional = clientRepository.findById(id);
+        Client client = clientOptional.orElseThrow(() -> new ResourceNotFoundException("Client Id: " + id + " not found"));
+
+        return new ClientDto(client);
     }
 }
