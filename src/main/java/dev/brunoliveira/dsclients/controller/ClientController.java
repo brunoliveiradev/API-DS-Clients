@@ -7,6 +7,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import javax.validation.Valid;
+import java.net.URI;
 
 @RestController
 @RequestMapping(value = "/clients")
@@ -35,5 +39,15 @@ public class ClientController {
     public ResponseEntity<ClientDto> findById(@PathVariable Long id){
         ClientDto client = clientService.findById(id);
         return ResponseEntity.ok().body(client);
+    }
+
+    @PostMapping
+    public ResponseEntity<ClientDto> insert(@RequestBody @Valid ClientDto createdClientDto){
+        createdClientDto = clientService.insert(createdClientDto);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(createdClientDto.getId()).toUri();
+
+        return ResponseEntity.created(uri).body(createdClientDto);
     }
 }

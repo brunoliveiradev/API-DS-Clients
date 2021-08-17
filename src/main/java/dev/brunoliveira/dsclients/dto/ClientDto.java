@@ -2,6 +2,8 @@ package dev.brunoliveira.dsclients.dto;
 
 import dev.brunoliveira.dsclients.model.Client;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -9,10 +11,17 @@ public class ClientDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
+
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String cpf;
+
     private Double income;
     private Integer children;
+
+    @NotNull
     private Instant birthDate;
 
     public ClientDto() {
