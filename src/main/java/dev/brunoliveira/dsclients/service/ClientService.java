@@ -4,6 +4,7 @@ import dev.brunoliveira.dsclients.dto.ClientDto;
 import dev.brunoliveira.dsclients.model.Client;
 import dev.brunoliveira.dsclients.repositories.ClientRepository;
 import dev.brunoliveira.dsclients.service.exceptions.ResourceNotFoundException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -51,6 +52,15 @@ public class ClientService {
 
             return new ClientDto(client);
         } catch (EntityNotFoundException exception) {
+            throw new ResourceNotFoundException("ID: " + id + " not found!");
+        }
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        try {
+            clientRepository.deleteById(id);
+        } catch (EmptyResultDataAccessException exception) {
             throw new ResourceNotFoundException("ID: " + id + " not found!");
         }
     }
