@@ -1,5 +1,5 @@
 <h1 align="center">
-    API DS Client
+    API DS Clients
 </h1>
 
 <p align="center">
@@ -45,7 +45,7 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 ## 💻 Projeto
 
-🚀 O repositório tem como propósito fixar os conhecimentos obtidos durante o Bootcamp Spring React 3.0 proporcionado pela [DevSuperior](https://devsuperior.com.br), bem como compartilhar o código do desafio proposto para este projeto.  
+🚀 O repositório tem como propósito fixar os conhecimentos obtidos durante o primeiro capítulo do Bootcamp Spring React 3.0 proporcionado pela [DevSuperior](https://devsuperior.com.br), bem como compartilhar o código do desafio proposto para este projeto.  
 
 👾 O projeto consistiu em criar um CRUD completo de web services REST para acessar recursos de clientes. 
 
